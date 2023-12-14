@@ -1,0 +1,20 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+
+/* MAIN */
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
+/* Regular styles for larger screens */
+.body{
+  background-image: url(assets/img/sfondo.png);
+  background-color: rgb(46, 125, 194);
+}
