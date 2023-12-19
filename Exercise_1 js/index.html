@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="Exercise_1 js/">
+    <link rel="stylesheet" href="ex_1.js">
     <title>Day_3</title>
   </head>
   <body>
    <script>
+    /*
     // <!--Example of Numbers in Java Script-->
     let numberofApples = 5;
     let totalFruits = numberofApples + 3;
@@ -97,7 +98,7 @@ console.log(myBox);
  Create two variables, "name1" and "name2". Assign to name1 the string "john," and assign to name2 the string "John" (with a capital J!).
  Verify that name1 is different from name2 (hint: this is the same as verifying that their equality is false).
  EXTRA: check that their equality becomes true if both are transformed to lowercase (without changing the value of name2!).
-*/
+
 let name1 = "john";
 let name2 = "John";
 let areDifferent = name1 !== name2;
@@ -105,7 +106,281 @@ console.log("Are name1 and name2 different?" + areDifferent);
 
 let areEqualAfterLowercase = name1.toLowerCase()== name2.toLowerCase();
 console.log("Are name1 and name2 equal"+ areEqualAfterLowercase);
-   </script>
+*/
+
+
+/* -----------------------------------------------------EXERCISE 1--------------------------------------------------------------------
+Write an algorithm to find the largest among two integers.
+
+
+function findLargest(number1, number2){
+let largestNumber = (number1 > number2) ? number1 : number2;
+return largestNumber;
+}
+let result = findLargest(343, 32)
+console.log("The Largest number is: " + result);
+
+//another example  using if else
+function findLargest(number3 , number4){
+if(number3 > number4){
+  return number3;
+}
+else if(number4>number3)
+  return number4;
+else{
+  return "Both number are equal";
+}
+}
+let result2 = findLargest(34, 2321);
+console.log("The Largest number is : " + result2);
+*/
+
+/* -----------------------------------------------------EXERCISE 2--------------------------------------------------------------------
+Write an algorithm that displays "not equal" in the console if a given integer is different from 5.
+
+function checkNotEqual(testNumber){
+  if(testNumber !== 5){
+    console.log("Not Equal");
+  }
+  else{
+    console.log("Equal to")
+  }
+}
+checkNotEqual(5);
+checkNotEqual(7);
+*/
+
+/* -----------------------------------------------------EXERCISE 3--------------------------------------------------------------------
+Write an algorithm that displays "divisible by 5" in the console if a provided number is perfectly divisible by 5 (hint: look up the modulo operator on a search engine).
+
+
+//Function to check divisible by 5
+function checkDivisibleBy5(number){
+  if(number %  5 == 0){
+  console.log("divisible by 5");
+  }
+  else{
+
+  console.log("Not divisible by 5");
+  }
+}
+checkDivisibleBy5(45);
+checkDivisibleBy5(3);
+
+*/
+/* -----------------------------------------------------EXERCISE 4--------------------------------------------------------------------
+Write an algorithm to check that, given two integers, one of their values is 8 or if their addition/subtraction is equal to 8.
+*/
+
+function checkIntergerby8(number1, number2){
+  if(number1 == 8 || number2 == 8){
+   console.log("One of the number is 8");
+  }
+  else {
+    if(number1 + number2 == 8 || (number1 - number2) == 8){
+      console.log("The edition / substractin is equal to 8");
+    }
+    else{
+      console.log("Neighter Consition is met");
+    }
+  }
+}
+ checkIntergerby8(8 , 18);
+ checkIntergerby8(4, 4);
+ checkIntergerby8(20, 12);   
+ checkIntergerby8(8, 23);
+console.log("------------------------------------------------------------------------------------------------------------------------")
+ /* -----------------------------------------------------EXERCISE 5--------------------------------------------------------------------
+You're working on an e-commerce site. You're saving the total balance of the user's shopping cart in a variable "totalShoppingCart".
+There's an ongoing promotion: if the cart total exceeds 50, the user is eligible for free shipping (otherwise, shipping costs a fixed amount of 10).
+Create an algorithm that determines the total amount to be charged to the user for checkout.
+function calculateTotalAmount(totalShoppingCart){
+  const freeShippingThreshold = 50;
+  const shippingCost = 25;
+
+  if(totalShoppingCart > freeShippingThreshold){
+    return totalShoppingCart;
+  }
+   if(totalShoppingCart == shippingCost){
+    return totalShoppingCart + shippingCost;
+   }
+   else{
+    return totalShoppingCart + shippingCost;
+  }
+}
+const cardTotal1 = 60;
+const  cardTotal2 = 50;
+const cardTotal3 = 30;
+
+console.log("Total payment of card 1 is : $" + calculateTotalAmount(cardTotal1));
+console.log("Total payment of card 2 is : $" + calculateTotalAmount(cardTotal2));
+console.log("Total payment of card 2 is : $" + calculateTotalAmount(cardTotal3));
+console.log("------------------------------------------------------------------------------------------------------------------------")*/
+
+/* -----------------------------------------------------EXERCISE 6--------------------------------------------------------------------
+You're working on an e-commerce site. You're saving the total balance of the user's shopping cart in a variable "totalShoppingCart".
+There's an ongoing promotion: if the cart total exceeds 50, the user is eligible for free shipping (otherwise, shipping costs a fixed amount of 10).
+Create an algorithm that determines the total amount to be charged to the user for checkout.
+
+Today is Black Friday, and a 20% discount is applied to every product.
+Modify the previous answer, including this new promotion in the algorithm, determining first whether the shipments are free or not and calculating the total.
+*/
+function calculateTotalAmount(totalShoppingCart){
+  const totalShippingThreshold = 50;
+  const shippingCost = 10;
+  const blackFridayDiscountPercentage = 20;
+
+const discountTotal = totalShoppingCart * (1-blackFridayDiscountPercentage/100);
+if(discountTotal > totalShippingThreshold){
+  return discountTotal;
+}
+else{
+  return discountTotal + shippingCost;
+}
+}
+const cardTotal1 = 70;
+const cardTotal2 = 40;
+
+console.log("Total amount to be charged after Discount : $" + calculateTotalAmount(cardTotal1));
+console.log("Total amount to be charged after Discount : $" + calculateTotalAmount(cardTotal2));
+
+/* -----------------------------------------------------EXERCISE 7--------------------------------------------------------------------
+Create three variables and assign a numerical value to each of them.
+Using a conditional block, create an algorithm to order them according to their value, from highest to lowest.
+Finally, display the result in the console.
+*/
+ // three veriables and assign numerical values
+
+ let num1 = 259;
+ let num2 = 150;
+ let num3 = 300;
+
+ // conditional block
+
+ let highest, middle, lowest;
+
+ if (num1 >= num2 && num1 >= num3){
+  highest = num1;
+  middle = (num2 >= num3) ? num2 : num3;
+  lowest = (num2 >= num3) ? num3 : num2;
+ }
+ else if(num2 >= num1 && num2 >= num3){
+  highest = num2;
+  middle = (num1 >= num3) ? num1 : num3;
+  lowest = (num1 >= num3) ? num3 : num1;
+ }
+ else{
+  highest = num3;
+  middle = (num1 >= num2) ? num1 : num2;
+  lowest = (num1 >= num2) ? num2 : num1
+ }
+console.log( "Ordered values from highest to lowest :" + highest + " , " + middle + " , "+ lowest);
+
+/* ----------------------------------------------------- EXERCISE 8 --------------------------------------------------------------------
+Create an algorithm to check whether a provided value is a number or not (hint: look up "typeof" on a search engine).
+*/
+//The typeof operator in JavaScript is used to determine the data type of a variable or an expression. It returns a string representing the data type.
+
+//Function to check if a value is a number 
+function isNumber(value){
+  return typeof value === 'number';
+}
+let inputValue1 = 45;
+let inputValue2 = "string"
+let inputValue3 = [];
+let inputValue4 = true;
+let inputValue5 = {};
+let inputValue6 = null;
+let inputValue7 = undefined;
+
+console.log(inputValue1 + " is a Number "+ isNumber(inputValue1));
+console.log(inputValue2 + " is a Number "+ isNumber(inputValue2));
+console.log(inputValue3 + " is a Number "+ isNumber(inputValue3));
+console.log(inputValue4 + " is a Number "+ isNumber(inputValue4));
+console.log(inputValue5 + " is a Number "+ isNumber(inputValue5));
+console.log(inputValue6 + " is a Number "+ isNumber(inputValue6));
+console.log(inputValue7 + " is a Number "+ isNumber(inputValue7));
+/* ----------------------------------------------------- EXERCISE 9 --------------------------------------------------------------------
+Create an algorithm to check if a provided number is even or odd (hint: look up the modulo operator on a search engine).
+*/
+function  checkEvenOrOdd(number){
+  if(number % 2 == 0){
+    return "Even";
+  }
+  else{
+    return "Odd";
+  }
+}
+let number1 = 12;
+let number2 = 7;
+
+console.log(number1 + ' is '+ checkEvenOrOdd(number1));
+console.log(number2 + ' is ' + checkEvenOrOdd(number2));
+/* ----------------------------------------------------- EXERCISE 10 --------------------------------------------------------------------
+Modify the logic of the following algorithm so that it displays the correct message in every circumstance. */
+// i see only semi-colon was missing after 7
+let val = 7; 
+if (val < 10) {
+    console.log("Less than 10");
+  } else if (val < 5) {
+    console.log("Less than 5");
+  } else {
+    console.log("Equal to 10 or greater");
+  }
+
+
+ /*----------------------------------------------------- EXERCISE 11 --------------------------------------------------------------------
+ Given the following object, write code to add a "city" property, with the value "Toronto".
+*/
+
+const me = {
+  name: 'John',
+  lastName: 'Doe',
+  skills: ['javascript', 'html', 'css'],
+};
+me.city = "Toronto";
+console.log(me);
+
+/* ----------------------------------------------------- EXERCISE 12 --------------------------------------------------------------------
+While still working on the previously given object, write code to remove the "lastName" property.
+*/
+delete me.lastName;
+console.log(me);
+/* ----------------------------------------------------- EXERCISE 13 --------------------------------------------------------------------
+While still working on the previously given object, write code to remove the last element of the "skills" property.
+*/
+// pop is used to remove last element of array
+me.skills.pop();
+console.log(me);
+
+// to remove first elemet of arry use [shift]
+me.skills.shift();
+console.log(me);
+/* ----------------------------------------------------- EXERCISE 14 --------------------------------------------------------------------
+Write code to create an initially empty array. Later, fill it with numbers from 1 to 10.
+*/
+let numberArray = [];
+for (let i = 1; i<=10; i++){
+  numberArray.push(i);
+}
+console.log(numberArray);
+
+// another example 
+let fruitArray = [];
+let fruit = ['Apple', 'Mango','banana','10 more'];
+fruitArray.push(fruit);
+console.log(fruitArray);
+//Note: unshift() is used to add more data in the start of array
+
+/* ----------------------------------------------------- EXERCISE 15 --------------------------------------------------------------------
+Write code to replace the last element of the array, which is the value 10, with the value 100.*/
+ let numArray = [1,2,3,4,5,6,7,8,9,10];
+ numArray[numArray.length - 1] = 100;
+
+ console.log(numArray);
+//numbersArray.length - 1 is used to get the index of the last element in the array.
+//The value at that index is then replaced with the new value, which is 100.
+</script>
 
   </body>
 </html>
